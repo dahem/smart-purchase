@@ -1,7 +1,13 @@
 <template>
   <v-app>
     <router-view />
-    <v-bottom-navigation color="primary" absolute grow v-model="bottomNav">
+    <v-bottom-navigation
+      color="primary"
+      absolute
+      grow
+      v-model="bottomNav"
+      @change="changeMenu"
+    >
       <v-btn height="100%" value="category">
         <span>Category</span>
         <v-icon>mdi-tag</v-icon>
@@ -27,6 +33,11 @@ export default {
     return {
       bottomNav: "category"
     };
+  },
+  methods: {
+    changeMenu(value) {
+      this.$router.push(`/${value}`);
+    }
   }
 };
 </script>

@@ -1,14 +1,26 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Category from "@/views/Category.vue";
+import Purchase from "@/views/Purchase.vue";
+import NFC from "@/views/Category.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    component: Home
+    path: "/category",
+    name: "category",
+    component: Category
+  },
+  {
+    path: "/purchase",
+    name: "purchase",
+    component: Purchase
+  },
+  {
+    path: "/nfc",
+    name: "nfc",
+    component: NFC
   }
 ];
 
